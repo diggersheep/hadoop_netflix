@@ -1,0 +1,6 @@
+pre_data/
+data/
+data_converter/__pycache/
+data_converter/venv/
+data_converter/*.csv
+data_converter/*.pyc
