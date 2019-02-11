@@ -72,14 +72,14 @@ class KaggleDecoder:
 		header = ''
 		for i in range(len(self.headers)):
 			if i != 0:
-				header += ','
+				header += ';'
 			header += self.headers[i]
 		return (header + '\n') if len(header) > 0 else ''
 
 	def get_csv_data(self, lines):
 		s = self.csv_header()
 		s += '\n'.join(lines)
-		raw_data = csv.DictReader(io.StringIO(s), delimiter=',', quotechar='"')
+		raw_data = csv.DictReader(io.StringIO(s), delimiter=';', quotechar='"')
 		data = []
 		for e in raw_data:
 			data.append(e)
